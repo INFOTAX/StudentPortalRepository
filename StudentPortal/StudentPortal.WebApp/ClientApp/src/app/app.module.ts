@@ -5,17 +5,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeModule } from './home/home.module';
+import { SharedModule } from '../shared/shared.module';
+import { AuthenticationModule } from '../authentication/authentication.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports:[
+  SharedModule,
  CommonModule,
 NgtUniversalModule,
- 
+HomeModule, 
     
-    AppRoutingModule
+    AppRoutingModule,
+    AuthenticationModule
   ],
   providers: [],
 })
