@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-yearcopy',
+  templateUrl: './yearcopy.component.html',
+  styleUrls: ['./yearcopy.component.css']
 })
-export class HomeComponent implements OnInit {
+export class YearcopyComponent implements OnInit {
 
   constructor(private _router : Router) { }
 
   ngOnInit() {
-  }
-  phycopy(){
-
-    this._router.navigate(['/phycopy']);
-   
   }
   yearcopy(){
 
     this._router.navigate(['/yearcopy']);
    
   }
+
 }

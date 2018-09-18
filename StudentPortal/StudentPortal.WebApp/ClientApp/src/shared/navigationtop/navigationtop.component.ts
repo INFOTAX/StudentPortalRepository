@@ -11,6 +11,7 @@ export class NavigationtopComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   register(){
 
     this._router.navigate(['/register']);

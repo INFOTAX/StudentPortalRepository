@@ -88,9 +88,9 @@
                     Just for Rs.2000 &#43; GST <br /> <p class="ebooktxt">(Soft Copy of Book)</p>
                 </div>
                 <div class="col-lg-3">
-                    <a class="btn btn-success btn-lg center-block btn-block" href="/Subscription/StudentBCInvoice">
+                    <a class="btn btn-success btn-lg center-block btn-block" (click)="softcopy">
                         <span>Start Now <br><small>Make Online Payment</small></span>
-                    </a><br />
+                    </a><br/>
                     
                 </div>
 
@@ -100,7 +100,7 @@
                     Just for Rs.2400 &#43; GST <br /> <p class="ebooktxt">(Physical Delivery of Book)</p>
                 </div>
                 <div class="col-lg-3">
-                    <a class="btn btn-success btn-lg center-block btn-block btntext " href="/Subscription/StudentBCMInvoice">
+                    <a class="btn btn-success btn-lg center-block btn-block btntext " (click)="phycopy()">
                         <span>Start Now <br><small>Make Online Payment</small></span>
                     </a>
                 </div>
@@ -109,12 +109,12 @@
             <div class="container pdsec1 hidden-lg">
                 <div class="row">
                     <div class="col-lg-12 amttxtxs">
-                        Just for Rs.2000 &#43; GST <br /> <p class="ebooktxtxs">(Soft Copy of Book)</p>
+                        Just for Rs.2000 &#43; GST <br /><p class="ebooktxtxs">(Soft Copy of Book)</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <a class="btn btn-success btn-lg center-block btn-block btntext" href="/Subscription/StudentBCInvoice">
+                        <a class="btn btn-success btn-lg center-block btn-block btntext" (click)="softcopy()">
                             <span>Start Now <br><small>Make Online Payment</small></span>
                         </a><br />
                     </div>
@@ -128,7 +128,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <a class="btn btn-success btn-lg center-block btn-block btntext" href="/Subscription/StudentBCMInvoice">
+                        <a class="btn btn-success btn-lg center-block btn-block btntext" (click)="phycopy()">
                             <span>Start Now <br><small>Make Online Payment</small></span>
                         </a>
                     </div>
@@ -270,7 +270,7 @@
             <div class="row pdsec1">
                 <div class="col-lg-3 amttxt">Just for Rs.1000 &#43; GST</div>
                 <div class="col-lg-3 ">
-                    <a class="btn btn-success btn-lg center-block btn-block btntext " href="/Subscription/StudentYrInvoice">
+                     <a class="btn btn-success btn-lg center-block btn-block btntext " (click)="yearcopy()">
                         <span>Start Now <br><small>Make Online Payment</small></span>
                     </a><br />
                     

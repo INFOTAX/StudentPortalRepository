@@ -8,18 +8,19 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from '../shared/shared.module';
 import { AuthenticationModule } from '../authentication/authentication.module';
+import { InvoiceModule } from '../invoice/invoice.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports:[
+    InvoiceModule,
   SharedModule,
  CommonModule,
 NgtUniversalModule,
 HomeModule, 
-    
-    AppRoutingModule,
+  AppRoutingModule,
     AuthenticationModule
   ],
   providers: [],
