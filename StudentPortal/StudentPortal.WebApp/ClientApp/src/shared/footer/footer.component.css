@@ -26,3 +26,9 @@ a {
     display: inline-block;
     opacity: 1;
 }
+.container-fluid {
+    padding-right: 30px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}

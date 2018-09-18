@@ -17,15 +17,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="tel:+91 700 465 1850" hreflang="x-default"><i class="fa fa-phone"></i>+91 700 465 1850 <span class="sr-only">(current)</span></a></li>
+            <li class="#"><a href="tel:+91 700 465 1850" hreflang="x-default"><i class="fa fa-phone"></i>+91 700 465 1850 <span class="sr-only">(current)</span></a></li>
             <li><a href="mailto:info@gstsuvidhaonline.com" hreflang="x-default"><i class="fa fa-envelope-o"></i> info@gstsuvidhaonline.com</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
-              <li><a class="faicon-facebook" href="https://www.facebook.com/GSTSuvidha/" target="_blank" hreflang="x-default"><i class="fa fa-facebook"></i>fb</a></li>
-              <li><a class="faicon-twitter"  href="https://twitter.com/GSTSuvidha" target="_blank" hreflang="x-default"><i class="fa fa-twitter"></i>twitter</a></li>
-              <li><a class="faicon-linkedin"  href="https://www.linkedin.com/company/gst-suvidha-online?trk=biz-companies-cym" target="_blank" hreflang="x-default"><i class="fa fa-linkedin"></i>linkedin</a></li>
-              <li><a class="faicon-instagram"  href="https://www.instagram.com/gstsuvidha/" target="_blank" hreflang="x-default"><i class="fa fa-instagram"></i>instagram</a></li>
+             
+              <li><a class="faicon-facebook" href="https://www.facebook.com/GSTSuvidha/" target="_blank" hreflang="x-default"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="faicon-twitter"  href="https://twitter.com/GSTSuvidha" target="_blank" hreflang="x-default"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="faicon-linkedin"  href="https://www.linkedin.com/company/gst-suvidha-online?trk=biz-companies-cym" target="_blank" hreflang="x-default"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="faicon-instagram"  href="https://www.instagram.com/gstsuvidha/" target="_blank" hreflang="x-default"><i class="fa fa-instagram"></i></a></li>
 
             </ul>
         </div>
@@ -40,19 +40,24 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a href="/"><img src="logo.png" alt="logo" width="87" height="41" /></a>
+          <a href="/"><img src="./assets/logo.png" alt="logo" width="87" height="41" /></a>
       </div>
       <div id="navbar" class="collapse navbar-collapse .navbar-fixed-width">
-          <ul class="nav navbar-nav navbar-right">
+          <!--<ul class="nav navbar-nav navbar-right">
              
               <li><a href="/Blog">Blogs</a></li>
-          </ul>
+          </ul>-->
             <ul class="nav navbar-nav navbar-right">
-  <li> <a routerLink="/register"  routerLinkActive="active">Sign Up</a>
+  <li><a class="btn btn-link" (click)=" register()"  style="text-decoration: none; color: black;">
+    <span class='glyphicon glyphicon-log-in'></span> SIGN Up
+</a>
       
 </li>
 
-<li><a routerLink="/login"  routerLinkActive="active">Log in</a></li>
+<li> <a class="btn btn-link" (click)=" login()"  style="text-decoration: none; color: black;">
+    <span class='glyphicon glyphicon-log-in'></span> Log IN
+
+</a></li>
 </ul>
 
       </div><!--/.nav-collapse -->
