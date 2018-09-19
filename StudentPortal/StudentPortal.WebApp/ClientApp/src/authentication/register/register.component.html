@@ -81,41 +81,41 @@
                                             </div>
                                             <div class="col-lg-12">
                                                 <section id="loginForm">
-                                                    <form action="/Account/StudentRegister" method="post">
+                                                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                                                         <input name="__RequestVerificationToken" type="hidden" value="g0WYsrDA0uFSSKc67gda8uzaTaUeav5byKAGU5to9uERMjaWIgzgqd_Ll6YUyFeC6jmz2ulkj_MSvTNwJ6FaxrdiOa-o-f5gtzQwkMleq2w1"
                                                         />
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input class="form-control text-box single-line" data-val="true" data-val-required="The Name field is required." id="Name"
+                                                            <input formControlName="name" class="form-control text-box single-line" data-val="true" data-val-required="The Name field is required." id="Name"
                                                                 name="Name" placeholder="Name" type="text" value="" />
                                                             <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input class="form-control text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address."
+                                                            <input formControlName="email" class="form-control text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address."
                                                                 data-val-required="The Email field is required." id="Email" name="Email"
                                                                 placeholder="Email-ID" type="email" value="" />
                                                             <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input class="form-control text-box single-line password" data-val="true" data-val-length="The Password must be at least 6 characters long."
+                                                            <input formControlName="password" class="form-control text-box single-line password" data-val="true" data-val-length="The Password must be at least 6 characters long."
                                                                 data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required."
                                                                 id="Password" name="Password" placeholder="Password" type="password"
                                                                 value="" />
                                                             <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input class="form-control text-box single-line password" data-val="true" data-val-equalto="The password and confirmation password do not match."
+                                                            <input formControlName="confirmPassword" class="form-control text-box single-line password" data-val="true" data-val-equalto="The password and confirmation password do not match."
                                                                 data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword"
                                                                 placeholder="Confirm Password" type="password" value="" />
                                                             <span class="field-validation-valid text-danger" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input class="form-control text-box single-line" data-val="true" data-val-required="The Qualification field is required."
+                                                            <input formControlName="qualification" class="form-control text-box single-line" data-val="true" data-val-required="The Qualification field is required."
                                                                 id="Qualification" name="Qualification" placeholder="Qualification"
                                                                 type="text" value="" />
                                                             <span class="field-validation-valid text-danger" data-valmsg-for="Qualification" data-valmsg-replace="true"></span>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input class="form-control text-box single-line" data-val="true" data-val-regex="Entered Contact No format is not valid."
+                                                            <input formControlName="contactNumber" class="form-control text-box single-line" data-val="true" data-val-regex="Entered Contact No format is not valid."
                                                                 data-val-regex-pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
                                                                 data-val-required="Your must provide a Contact Number" id="ContactNumber"
                                                                 name="ContactNumber" placeholder="Contact Number" type="tel"
@@ -123,7 +123,7 @@
                                                             <span class="field-validation-valid text-danger" data-valmsg-for="ContactNumber" data-valmsg-replace="true"></span>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input class="form-control text-box single-line" data-val="true" data-val-required="The Address field is required." id="Address"
+                                                            <input formControlName="address" class="form-control text-box single-line" data-val="true" data-val-required="The Address field is required." id="Address"
                                                                 name="Address" placeholder="Address" type="text" value="" />
                                                             <span class="field-validation-valid text-danger" data-valmsg-for="Address" data-valmsg-replace="true"></span>
                                                         </div>
@@ -137,6 +137,8 @@
 
                                                         </div>
                                                     </form>
+                                                    {{registerForm.value |json}}
+
                                                 </section>
                                             </div>
 
@@ -149,8 +151,7 @@
 
 
 
-
-
+                  
 
 
 

@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./softcopy.component.css']
 })
 export class SoftcopyComponent implements OnInit {
-
+  date = new Date();
   constructor(private _router : Router) { }
 
   ngOnInit() {

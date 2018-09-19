@@ -16,6 +16,11 @@ export class HomeComponent implements OnInit {
     this._router.navigate(['/phycopy']);
    
   }
+  softcopy(){
+
+    this._router.navigate(['/softcopy']);
+   
+  }
   yearcopy(){
 
     this._router.navigate(['/yearcopy']);

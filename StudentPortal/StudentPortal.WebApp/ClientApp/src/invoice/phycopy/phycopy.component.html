@@ -1,6 +1,6 @@
 <app-navigationtop></app-navigationtop>
 <app-topnav></app-topnav>
-<br>
+
 <!--invoicestart-->
 <div class="container">
     <div class="row">
@@ -16,11 +16,8 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 text-right">
                     <p>
-                        <em>Date:</em>  &nbsp;<i><span id="di"></span></i>
-                        <script>
-                            var d = new Date();
-                            document.getElementById("di").innerHTML = d.toLocaleDateString();
-                        </script>
+                        <b><em>Date:</em></b>  &nbsp;<i><span id="di"></span></i>
+                        {{date |  date:'dd/MM/yyyy'}}
                     </p>
                 </div>
             </div>

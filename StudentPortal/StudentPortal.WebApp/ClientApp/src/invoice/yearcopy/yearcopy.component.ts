@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./yearcopy.component.css']
 })
 export class YearcopyComponent implements OnInit {
-
+  date = new Date();
   constructor(private _router : Router) { }
 
   ngOnInit() {
