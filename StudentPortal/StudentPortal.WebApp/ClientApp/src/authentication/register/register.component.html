@@ -1,1 +1,167 @@
 <app-navigationtop></app-navigationtop>
+
+<br>
+<br>
+<div class="container-fluid">
+    <section id="stud-signup">
+        <div class="container cnt">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/" style="text-decoration:none;font-weight: 700;color:#190f50;">
+                                <i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" style="font-weight: 700;color:#222121;">Certification Sign Up</li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-md-6 hidden-xs">
+                        <div id="msgregapp" class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12 msgimg">
+                                    <img alt="GST Suvidha Cetification Icons" class="img-responsive" src="./assets/stud-signup.jpg" width="357" height="208"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 col-xs-12">
+                                        <p>
+                                            Enroll now for GST Certification course
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <i class="fa fa-check-square-o"></i>
+                                                <p>Get Course Material Online or via physical delivery</p>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-check-square-o"></i>
+                                                <p>A Highly Qualified Team</p>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-check-square-o"></i>
+                                                <p>Video Lectures</p>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-check-square-o"></i>
+                                                <p>Online Examination</p>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-check-square-o"></i>
+                                                <p>GST Certification</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div id="register" class="container panel panel-register">
+                            <div class="row">
+                                <div class="col-md-12 sgnpd-client">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-lg-12 wel-nt">
+                                                <span>Welcome to GST Suvidha</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-10 col-lg-offset-1">
+                                                    <h4 class="hdrtoptxtsign text-xs-center">Sign up with Email-ID</h4>
+                                                    <hr class="hrcol" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <section id="loginForm">
+                                                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                                        <input name="__RequestVerificationToken" type="hidden" value="g0WYsrDA0uFSSKc67gda8uzaTaUeav5byKAGU5to9uERMjaWIgzgqd_Ll6YUyFeC6jmz2ulkj_MSvTNwJ6FaxrdiOa-o-f5gtzQwkMleq2w1"
+                                                        />
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="name" class="form-control text-box single-line" data-val="true" data-val-required="The Name field is required." id="Name"
+                                                                name="Name" placeholder="Name" type="text" value="" />
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="email" class="form-control text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address."
+                                                                data-val-required="The Email field is required." id="Email" name="Email"
+                                                                placeholder="Email-ID" type="email" value="" />
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="password" class="form-control text-box single-line password" data-val="true" data-val-length="The Password must be at least 6 characters long."
+                                                                data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required."
+                                                                id="Password" name="Password" placeholder="Password" type="password"
+                                                                value="" />
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="confirmPassword" class="form-control text-box single-line password" data-val="true" data-val-equalto="The password and confirmation password do not match."
+                                                                data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword"
+                                                                placeholder="Confirm Password" type="password" value="" />
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="qualification" class="form-control text-box single-line" data-val="true" data-val-required="The Qualification field is required."
+                                                                id="Qualification" name="Qualification" placeholder="Qualification"
+                                                                type="text" value="" />
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Qualification" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="contactNumber" class="form-control text-box single-line" data-val="true" data-val-regex="Entered Contact No format is not valid."
+                                                                data-val-regex-pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+                                                                data-val-required="Your must provide a Contact Number" id="ContactNumber"
+                                                                name="ContactNumber" placeholder="Contact Number" type="tel"
+                                                                value="" />
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="ContactNumber" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="address" class="form-control text-box single-line" data-val="true" data-val-required="The Address field is required." id="Address"
+                                                                name="Address" placeholder="Address" type="text" value="" />
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="col-lg-12 btnstleR">
+                                                            <input type="submit" value="Sign Up" class="btn btn-success btn-lg" />
+                                                        </div>
+                                                        <div class="form-group btnstleR">
+                                                            <p class="areg sgnpd">Already Registered? &nbsp;&nbsp;
+                                                                <a href="/Account/Login">Login</a>
+                                                            </p>
+
+                                                        </div>
+                                                    </form>
+                                                    {{registerForm.value |json}}
+
+                                                </section>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                  
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+<app-footer></app-footer>
+<br>
+<br>
