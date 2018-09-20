@@ -21,11 +21,11 @@ namespace StudentPortal.WebApp.AuthApi
         private readonly IMapper _mapper;
         private readonly string _clientId;
         private readonly string _audience;
-        private readonly string _connection;
+        
         private readonly HttpClient _httpClient;
         private string tokenUrl = "oauth/token";
         private string userProfileUrl = "userinfo";
-        private string registerUrl = "dbconnections/signup";
+        
 
         public AuthController(IUserRepository userProfileRepository, IConfiguration iconfiguration, IMapper mapper)
         {
@@ -35,7 +35,7 @@ namespace StudentPortal.WebApp.AuthApi
 
             _clientId = iconfiguration.GetSection("Auth0Settings").GetSection("ClientId").Value;
             _audience = iconfiguration.GetSection("Auth0Settings").GetSection("Audience").Value;
-            _connection = iconfiguration.GetSection("Auth0Settings").GetSection("Connection").Value;
+           
 
             _httpClient = new HttpClient()
             {
@@ -46,14 +46,7 @@ namespace StudentPortal.WebApp.AuthApi
 
         }
 
-        [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterDetail registerDetail )
-        {
-            var registerResponse = await RegisterAsyncFromAuth0(registerDetail.Email, registerDetail.Password);
-            return Ok(registerResponse);
-        }
-
-
+       
         [HttpPost]
         [Route("token")]
         public async Task<IActionResult> GetAuthToken([FromBody] LoginDetail loginDetail)
@@ -79,21 +72,7 @@ namespace StudentPortal.WebApp.AuthApi
             return Ok(tokenResponse);
         }
 
-        private async Task<RegisterResponse> RegisterAsyncFromAuth0(string email,string password)
-        {
-            var rawResult = await _httpClient.PostAsync(registerUrl, new FormUrlEncodedContent(new[]
-            {
-                new KeyValuePair<string, string>("client_id",_clientId),
-                new KeyValuePair<string, string>("email",email),
-                new KeyValuePair<string, string>("password",password),
-                new KeyValuePair<string, string>("connection",_connection),
-            }));
-
-            var data = await rawResult.Content.ReadAsStringAsync();
-
-            return JsonConvert.DeserializeObject<RegisterResponse>(data);
-        }
-
+      
         private async Task<TokenResponse> GetTokenAsyncFromAuth0(string userName, string password)
         {
 
@@ -156,23 +135,9 @@ namespace StudentPortal.WebApp.AuthApi
         public string Password { get; set; }
     }
 
-    public class RegisterDetail
-    {
-        public string Email { get; set; }
-        public string Password { get; set; }
-    }
+  
 
-     internal class RegisterResponse
-    {
-        [JsonProperty("_id")]
-        public string Id { get; set; }
-
-        [JsonProperty("email_verified")]
-        public string EmailVerified { get; set; }
-
-        [JsonProperty("email")]
-        public string Email { get; set; }
-    }
+     
     internal class TokenResponse
     {
         [JsonProperty("access_token")]

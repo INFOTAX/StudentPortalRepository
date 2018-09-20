@@ -54,22 +54,22 @@
             <div class="row">
               <div class="col-lg-12">
                 <section id="loginForm">
-                  <form action="/Account/Login" class="form-horizontal" method="post" role="form">
+                  <form>
                     <input name="__RequestVerificationToken" type="hidden" value="y1Q3a7IHmu1r3s4IS1psGXk98qF5SfQSxlsGCeQQPFZd26lmUb3zdDBG-rPmtfkS8XKb6EXrvSBR2n6OkonMkphL337odboUdGZ6gB8SBDs1"
                     />
                     <div class="row">
                       <div class="col-lg-12 txtlgin">
                         <input class="form-control logintxtbx" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required."
-                          id="Email" name="Email" placeholder="User-ID" type="text" value="" />
+                          id="Email" name="Email" placeholder="User-ID" type="text" #userName value="" />
                         <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                       </div>
                       <div class="col-lg-12 txtlgin">
                         <input class="form-control logintxtbx" data-val="true" data-val-required="The Password field is required." id="Password"
-                          name="Password" placeholder="Password" type="password" />
+                          name="Password" placeholder="Password" type="password" #pwd />
                         <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
                       </div>
                       <div class="col-lg-12">
-                        <input type="submit" value="Log in" class="btn btn-success btn-lg center-block btn-width" />
+                        <button type="button" (click)="doLogin(userName.value,pwd.value)"  class="btn btn-success btn-lg center-block btn-width" >Log In</button>
                       </div>
                     </div>
                   </form>
