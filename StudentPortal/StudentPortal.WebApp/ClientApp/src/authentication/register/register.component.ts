@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { RegisterService } from '../services/register.service';
 import { Register } from '../register';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   registerForm:FormGroup;
   register : Register;
   
-  constructor(private fb: FormBuilder,private registerService : RegisterService) { }
+  constructor(private fb: FormBuilder,private _router : Router,private registerService : RegisterService) { }
  
   ngOnInit() {
     this.registerForm = this.newForm();
@@ -35,6 +35,7 @@ export class RegisterComponent implements OnInit {
   create(){
     let createUser = Object.assign({},this.register,this.registerForm.value);
     this.registerService.createUser(createUser).subscribe(() => alert('Hmm')); 
+    return this._router.navigate(['login']);
   }
 
 
