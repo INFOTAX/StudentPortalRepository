@@ -39,6 +39,7 @@ export class NavigationtopComponent implements OnInit {
       this.toggleMenu=false;
     }
 }
+
 toggleLogin:boolean=false;
 onToggleLogin():void{
   //for logged in user profile/login toggle

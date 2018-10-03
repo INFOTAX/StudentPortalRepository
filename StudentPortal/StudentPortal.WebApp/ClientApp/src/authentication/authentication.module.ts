@@ -6,13 +6,17 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterService } from './services/register.service';
 import { LoginService } from './services/login.service';
+import { MessageModule } from 'primeng/message';
+import { MessagesModule } from 'primeng/messages';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MessageModule,
+    MessagesModule
   ],
   declarations: [RegisterComponent, LoginComponent],
   providers : [RegisterService,LoginService]

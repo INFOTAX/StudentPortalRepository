@@ -24,29 +24,28 @@
 
 
                 <form action="/Account/ExternalLogin" method="post">
-                  <input name="__RequestVerificationToken" type="hidden" value="E-kXUq25RN5ploFjuathCYjpL5AzD1yii6UPUtUuaqC_beQ7wjBnO6OZ3jHjhG_ISxqppBjPtLyrjEpC1pjx8bET7_ulWehD6nk718goUEI1"
-                  />
-                  <div id="socialLoginList">
+                  
+               <!--   <div id="socialLoginList">
                     <p>
                       <button type="submit" class="btn btn-danger btn-lg center-block btn-width" id="Google" name="provider" value="Google" title="Log in using your Google account">Sign Up Via Google
                         <i class="fa fa-google"></i>
                       </button>
                     </p>
-                  </div>
+                  </div>-->
                 </form>
 
               </section>
             </div>
-            <div class="col-lg-12">
+            <!--<div class="col-lg-12">
               <p class="text-center ptext">
                 <b>OR</b>
               </p>
-            </div>
+            </div>-->
           </div>
           <div class="row">
             <div class="col-lg-12">
               <div class="col-lg-10 col-lg-offset-1">
-                <h4 class="hdrtoptxtsign text-xs-center">Login With Your Email-ID</h4>
+                <h4 class="hdrtoptxtsign text-xs-center"><b>Login With Your Email-ID</b></h4>
 
                 <hr class="hrcol" />
               </div>
@@ -55,21 +54,29 @@
               <div class="col-lg-12">
                 <section id="loginForm">
                   <form>
-                    <input name="__RequestVerificationToken" type="hidden" value="y1Q3a7IHmu1r3s4IS1psGXk98qF5SfQSxlsGCeQQPFZd26lmUb3zdDBG-rPmtfkS8XKb6EXrvSBR2n6OkonMkphL337odboUdGZ6gB8SBDs1"
-                    />
+                   
                     <div class="row">
                       <div class="col-lg-12 txtlgin">
                         <input class="form-control logintxtbx" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required."
                           id="Email" name="Email" placeholder="User-ID" type="text" #userName value="" />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        
                       </div>
                       <div class="col-lg-12 txtlgin">
                         <input class="form-control logintxtbx" data-val="true" data-val-required="The Password field is required." id="Password"
-                          name="Password" placeholder="Password" type="password" #pwd />
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                          name="Password" placeholder="Password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" #pwd />
+                        
                       </div>
+                     <!-- <div class="col-lg-12">
+                          <div class="pw"> 
+                          <button (click)="pwd.type=pwd.type=='password'?'text':'password'"  class="btn btn-success btn-md">
+                              <span toggle="#pwd" class="fa fa-fw fa-eye field-icon toggle-password"></span> </button>
+               Click to Show Password</div>
+
+                         
+                          <br>
+                      </div>-->
                       <div class="col-lg-12">
-                        <button type="button" (click)="doLogin(userName.value,pwd.value)"  class="btn btn-success btn-lg center-block btn-width" >Log In</button>
+                        <button type="button" (click)="doLogin(userName.value,pwd.value)"  class="btn btn-success btn-md center-block btn-width" style="width: 113px;border-radius: 9px;" >Log In</button>
                       </div>
                     </div>
                   </form>
@@ -79,10 +86,12 @@
             <div class="col-lg-12">
               <p class="areg sgnpd">
                 Don’t have an Account ?
-                <a data-toggle="modal" data-target="#signupmd">Sign Up</a>
+                <a href="/register">Signup</a>
+                <!--<a data-toggle="modal" data-target="#signupmd">Sign Up</a>-->
 
               </p>
-            </div>
+             
+            </div><!--sign up model start-->
             <section id="SignUp-modal">
               <div class="modal fade" id="signupmd">
                 <div class="modal-dialog modal-sm">
@@ -110,7 +119,8 @@
                   </div>
                 </div>
               </div>
-            </section>
+            </section><!--sign up model end-->
+           
           </div>
         </div>
       </div>
