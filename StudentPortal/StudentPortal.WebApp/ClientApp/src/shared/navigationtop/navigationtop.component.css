@@ -1,6 +1,7 @@
 .navbar-default {
-    background-image: linear-gradient(-90deg, #5600ffa1, #00ff7299);
+    /*background-image:linear-gradient(90deg, #3c425482,#794d3782, #9f9da2);*/
     /* background-color: #452727; */
+    background-image: linear-gradient(90deg, #367b5780,#a4a24a73, #9bbfb0);
     border-color: #81bd9e94;
 }
 .navbar-default .navbar-nav>li>a {
@@ -91,3 +92,6 @@
     border-bottom: 3px solid #ffc000;
     font-weight: 800;
     position: relative;}
+    li{
+        display:block;
+    }

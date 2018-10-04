@@ -5,6 +5,7 @@
 <div class="container-fluid">
     <section id="stud-signup">
         <div class="container cnt">
+            <!--header menu-->
             <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
@@ -16,6 +17,7 @@
                     </ol>
                 </div>
             </div>
+            <!--header menu end-->
 
 
             <div class="row">
@@ -61,6 +63,8 @@
                             </div>
                         </div>
                     </div>
+                    <!--right side content pagepic box end-->
+                    <!--form of left side start-->
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div id="register" class="container panel panel-register">
                             <div class="row">
@@ -76,69 +80,64 @@
                                             <div class="col-lg-12">
                                                 <div class="col-lg-10 col-lg-offset-1">
                                                     <h4 class="hdrtoptxtsign text-xs-center">Sign up with Email-ID</h4>
-                                                    <hr class="hrcol" />
+                                                    <hr class="hrcol"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <section id="loginForm">
                                                     <form [formGroup]="registerForm" (ngSubmit)="create()">
-                                                        <input name="__RequestVerificationToken" type="hidden" value="g0WYsrDA0uFSSKc67gda8uzaTaUeav5byKAGU5to9uERMjaWIgzgqd_Ll6YUyFeC6jmz2ulkj_MSvTNwJ6FaxrdiOa-o-f5gtzQwkMleq2w1"
-                                                        />
+
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input formControlName="name" class="form-control text-box single-line" data-val="true" data-val-required="The Name field is required." id="Name"
-                                                                name="Name" placeholder="Name" type="text" value="" />
-                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                                                            <input formControlName="name"  class="form-control text-box single-line ng-dirty ng-invalid" name="Name" placeholder="Name" type="text"  value=""/>
+                                                           
+                                                           <p-message severity="error" text="Name is required" *ngIf="!registerForm.controls['name'].valid&&registerForm.controls['name'].dirty"></p-message>
+                                                            
                                                         </div>
+                                                        
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input formControlName="email" class="form-control text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address."
-                                                                data-val-required="The Email field is required." id="Email" name="Email"
-                                                                placeholder="Email-ID" type="email" value="" />
-                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
-                                                        </div>
-                                                        <div class="col-lg-12 txtlgin">
-                                                            <input formControlName="password" class="form-control text-box single-line password" data-val="true" data-val-length="The Password must be at least 6 characters long."
-                                                                data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required."
-                                                                id="Password" name="Password" placeholder="Password" type="password"
+                                                            <input formControlName="email" class="form-control text-box single-line ng-dirty ng-invalid" name="Email" placeholder="Email-ID" type="email"
                                                                 value="" />
-                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                                                <p-message severity="error" text="Email is required" *ngIf="!registerForm.controls['email'].valid&&registerForm.controls['email'].dirty"></p-message>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input formControlName="confirmPassword" class="form-control text-box single-line password" data-val="true" data-val-equalto="The password and confirmation password do not match."
-                                                                data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword"
+                                                            <input formControlName="password" class="form-control text-box single-line password ng-dirty ng-invalid" name="Password" placeholder="Password"
+                                                                type="password" value="" />
+                                                                <p-message severity="error" text="Password is required" *ngIf="!registerForm.controls['password'].valid&&registerForm.controls['password'].dirty"></p-message>
+                                                        </div>
+                                                        <div class="col-lg-12 txtlgin">
+                                                            <input formControlName="confirmPassword" class="form-control text-box single-line password" id="ConfirmPassword" name="ConfirmPassword"
                                                                 placeholder="Confirm Password" type="password" value="" />
-                                                            <span class="field-validation-valid text-danger" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                                                                <p-message severity="error" text="Confirm your password" *ngIf="!registerForm.controls['confirmPassword'].valid&&registerForm.controls['confirmPassword'].dirty"></p-message>  
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input formControlName="qualification" class="form-control text-box single-line" data-val="true" data-val-required="The Qualification field is required."
-                                                                id="Qualification" name="Qualification" placeholder="Qualification"
-                                                                type="text" value="" />
-                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Qualification" data-valmsg-replace="true"></span>
+                                                            <input formControlName="qualification" class="form-control text-box single-line" id="Qualification" name="Qualification"
+                                                                placeholder="Qualification" type="text" value="" />
+                                                                <p-message severity="error" text="Qualificationis required" *ngIf="!registerForm.controls['qualification'].valid&&registerForm.controls['qualification'].dirty"></p-message>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input formControlName="contactNumber" class="form-control text-box single-line" data-val="true" data-val-regex="Entered Contact No format is not valid."
-                                                                data-val-regex-pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
-                                                                data-val-required="Your must provide a Contact Number" id="ContactNumber"
+                                                            <input formControlName="contactNumber" class="form-control text-box single-line" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})"
                                                                 name="ContactNumber" placeholder="Contact Number" type="tel"
                                                                 value="" />
-                                                            <span class="field-validation-valid text-danger" data-valmsg-for="ContactNumber" data-valmsg-replace="true"></span>
+                                                                <p-message severity="error" text="Contact is required" *ngIf="!registerForm.controls['contactNumber'].valid&&registerForm.controls['contactNumber'].dirty"></p-message>
                                                         </div>
                                                         <div class="col-lg-12 txtlgin">
-                                                            <input formControlName="address" class="form-control text-box single-line" data-val="true" data-val-required="The Address field is required." id="Address"
-                                                                name="Address" placeholder="Address" type="text" value="" />
-                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+                                                            <input formControlName="address" class="form-control text-box single-line" data-val="true" data-val-required="The Address field is required."
+                                                                id="Address" name="Address" placeholder="Address" type="text"
+                                                                value="" />
+                                                                <p-message severity="error" text="Address is required" *ngIf="!registerForm.controls['address'].valid&&registerForm.controls['address'].dirty"></p-message>
                                                         </div>
                                                         <div class="col-lg-12 btnstleR">
-                                                            <input type="submit" value="Sign Up" class="btn btn-success btn-lg" />
-                                                            
+                                                            <input type="submit" value="Sign Up" [disabled]="registerForm.invalid"class="btn btn-success btn-lg" style="border-radius:25px;"/>
+
                                                         </div>
                                                         <div class="form-group btnstleR">
                                                             <p class="areg sgnpd">Already Registered? &nbsp;&nbsp;
-                                                                <a href="/Account/Login">Login</a>
+                                                                <a href="/login">Login</a>
                                                             </p>
 
                                                         </div>
                                                     </form>
-                                                    {{registerForm.value |json}}
+                                                   
 
                                                 </section>
                                             </div>
@@ -149,10 +148,10 @@
                             </div>
                         </div>
                     </div>
+                    <!--form of left side end-->
 
 
 
-                  
 
 
 

@@ -22,7 +22,13 @@
     margin-left: -110px;
     margin-right: -110px;
     padding: 10px;
-    background: #ffeaaa;
+    background: #a2bea8;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+   /* margin-left: -110px;
+    margin-right: -110px;
+    padding: 10px;
+    background: #ffeaaa;*/
 }
 #newsletter {
     margin: 15px 15px;
@@ -43,11 +49,12 @@
     text-align: center;
 }
 .free-trailbtn {
-    border: 1px solid #00ACEE;
+    border-radius: 12px;
+    /*border: 1px solid #00ACEE;*/
     margin-top: -3px;
     margin-left: 22px;
     color: #fff;
-    background-color: #00a1ff;
+    background-color: #107d13ab;
     transition: background-color .35s, opacity .35s;
     padding: 6px 12px;
     font-weight: bold;

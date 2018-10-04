@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
 import { RegisterService } from '../services/register.service';
 import { Register } from '../register';
 import { ActivatedRoute, Router } from '@angular/router';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {MessageService} from 'primeng/api';
+import { Message } from 'primeng/components/common/api';
+import { SelectItem } from 'primeng/components/common/selectitem';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,8 +16,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   registerForm:FormGroup;
   register : Register;
-  
-  constructor(private fb: FormBuilder,private _router : Router,private registerService : RegisterService) { }
+  msg:Message;
+  constructor(private fb: FormBuilder,
+    private _router : Router, private messageService: MessageService,
+    private registerService : RegisterService) { }
  
   ngOnInit() {
     this.registerForm = this.newForm();
@@ -21,20 +28,20 @@ export class RegisterComponent implements OnInit {
   newForm(): FormGroup {
     return this.fb.group({
       
-      name: [''],
-     email: [''],
-     password: [''],
-     confirmPassword: [''],
-      qualification: [''],
-     contactNumber: [''],
-     address: [''],
+      name: ['',[Validators.required]],
+     email: ['',[Validators.required]],
+     password: ['',[Validators.required]],
+     confirmPassword: ['',[Validators.required]],
+      qualification: ['',[Validators.required]],
+     contactNumber: ['',[Validators.required]],
+     address: ['',[Validators.required]],
     
     });
   }
 
   create(){
     let createUser = Object.assign({},this.register,this.registerForm.value);
-    this.registerService.createUser(createUser).subscribe(() => alert('Hmm')); 
+    this.registerService.createUser(createUser).subscribe(() => alert('done')); 
     return this._router.navigate(['login']);
   }
 
